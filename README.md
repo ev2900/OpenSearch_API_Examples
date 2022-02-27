@@ -1,1 +1,1 @@
-# OpenSearch_API_Examples
+# OpenSearch API Examples
