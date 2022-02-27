@@ -4,4 +4,4 @@ Example Python programs that use the OpenSearch APIs for common task. For ease o
 
 Launch this Cloud9 enviorment by clicking the button below
 
-[![Launch CloudFormation Stack](https://sharkech-public.s3.amazonaws.com/misc-public/cloudformation-launch-stack.png)](https://console.aws.amazon.com/cloudformation/home#/stacks/new?stackName=open-search-demo-vpc&templateURL=https://sharkech-public.s3.amazonaws.com/misc-public/cloud9_w_OpenSearch_API_repo.yml)
+[![Launch CloudFormation Stack](https://sharkech-public.s3.amazonaws.com/misc-public/cloudformation-launch-stack.png)](https://console.aws.amazon.com/cloudformation/home#/stacks/new?stackName=cloud9-open-search&templateURL=https://sharkech-public.s3.amazonaws.com/misc-public/cloud9_w_OpenSearch_API_repo.yml)
