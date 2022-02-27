@@ -109,3 +109,7 @@ print('------')
 # Log into the follower cluster's dashboard and validate that you can see the replicated index
 # Un: OSMasterUser
 # Pw: AwS#OpenSearch1
+
+#
+# More information on opensearch cross cluster replication can be found HERE - https://docs.aws.amazon.com/opensearch-service/latest/developerguide/replication.html
+#
