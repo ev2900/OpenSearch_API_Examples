@@ -41,20 +41,23 @@ create_index_r_body = {
         "type": "date",
         "format": "yyyy-MM-dd hh:mm:ss"
       },
-      "ip-address": {
+      "application_id": {
         "type": "text"
       },
-      "application-id": {
+      "cpu_util": {
         "type": "integer"
       },
-      "log-message": {
-        "type": "text"
+      "memory_util": {
+        "type": "integer"
+      },
+      "disk_util": {
+        "type": "integer"
       }
     }
   }
 }
 
-create_index_r = requests.put(os_url + '/log-data-1', auth=('OSMasterUser', 'AwS#OpenSearch1'), headers= {'Content-type': 'application/json'}, data=json.dumps(create_index_r_body))
+create_index_r = requests.put(os_url + '/infa-logs-1', auth=('OSMasterUser', 'AwS#OpenSearch1'), headers= {'Content-type': 'application/json'}, data=json.dumps(create_index_r_body))
 
 print('------ Create an index on os cluster ------')
 print(create_index_r.text)
@@ -66,10 +69,7 @@ print('------')
 
 print('------ Sending documents ------')
 
-ip_address_array = ['52.95.4.6', '52.95.8.11', '52.95.6.2', '52.95.1.3', '52.95.14.13']
-application_id_array = [1, 2, 3, 4, 5]
-log_message_array = ['Error out of memory', 'Warning memory utilization above 80%', 'Warning CPU utilization above 80%', 'Warning CPU utilization above 50%', 'Warning remaining disk space 20%']
-
+# Produce a baseline of normal data over the past 2 years
 start = datetime.strptime('1/1/2020 12:00 AM', '%m/%d/%Y %I:%M %p')
 end = datetime.today()
 
@@ -78,16 +78,15 @@ counter = 0
 
 while counter < number_of_log_messages_to_send:
     
-    ip_id_index = random.randint(0,4)
-
     insert_document_r_body = {
         "eventtime": str(random_date(start, end).strftime('%Y-%m-%d %I:%M:%S')),
-        "ip-address": ip_address_array[ip_id_index],
-        "application-id": application_id_array[ip_id_index],
-        "log-message": log_message_array[random.randint(0,4)]
+        "application_id": random.randint(1,100),
+        "cpu_util": random.randint(1,25),
+        "memory_util": random.randint(1,25),
+        "disk_util": random.randint(1,25)
     }
     
-    insert_document_r = requests.put(os_url + '/log-data-1/_doc/' + str(counter+1), auth=('OSMasterUser', 'AwS#OpenSearch1'), headers= {'Content-type': 'application/json'}, data=json.dumps(insert_document_r_body))
+    insert_document_r = requests.put(os_url + '/infa-logs-1/_doc/' + str(counter+1), auth=('OSMasterUser', 'AwS#OpenSearch1'), headers= {'Content-type': 'application/json'}, data=json.dumps(insert_document_r_body))
     
     print('Message #' + str(counter+1) + ' | ' + insert_document_r.text)
     
