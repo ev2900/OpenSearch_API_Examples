@@ -12,6 +12,7 @@ import random
 from datetime import datetime
 from random import randrange
 from datetime import timedelta
+from dateutil.relativedelta import relativedelta
 
 # Define functions to be used later in the code ...
 def random_date(start, end):
@@ -69,10 +70,9 @@ print('------')
 
 print('------ Sending documents ------')
 
-# Produce a baseline of normal data over the past 2 years
-start = datetime.strptime('1/1/2020 12:00 AM', '%m/%d/%Y %I:%M %p')
+# Produce a baseline of normal data for the last 6 months
+start = datetime.today() - relativedelta(months=+36)
 end = datetime.today()
-
 number_of_log_messages_to_send = 10000
 counter = 0
 
@@ -80,7 +80,7 @@ while counter < number_of_log_messages_to_send:
     
     insert_document_r_body = {
         "eventtime": str(random_date(start, end).strftime('%Y-%m-%d %I:%M:%S')),
-        "application_id": random.randint(1,100),
+        "application_id": 2,
         "cpu_util": random.randint(1,25),
         "memory_util": random.randint(1,25),
         "disk_util": random.randint(1,25)
@@ -88,7 +88,7 @@ while counter < number_of_log_messages_to_send:
     
     insert_document_r = requests.put(os_url + '/infa-logs-1/_doc/' + str(counter+1), auth=('OSMasterUser', 'AwS#OpenSearch1'), headers= {'Content-type': 'application/json'}, data=json.dumps(insert_document_r_body))
     
-    print('Message #' + str(counter+1) + ' | ' + insert_document_r.text)
+    print('Message #' + str(counter+1) + ' | ' + str(insert_document_r_body) + ' | ' + insert_document_r.text)
     
     # print(json.dumps(insert_document_r_body))
     
