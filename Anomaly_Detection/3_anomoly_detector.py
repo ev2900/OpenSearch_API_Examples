@@ -64,7 +64,7 @@ create_detector_body = {
   ]
 }
 
-create_detector_r = requests.put(os_url + '/infa-logs-1', auth=('OSMasterUser', 'AwS#OpenSearch1'), headers= {'Content-type': 'application/json'}, data=json.dumps(create_detector_body))
+create_detector_r = requests.put(os_url + '/_plugins/_anomaly_detection/detectors', auth=('OSMasterUser', 'AwS#OpenSearch1'), headers= {'Content-type': 'application/json'}, data=json.dumps(create_detector_body))
 
 print('------ Created an anomoly detector ------')
 print(create_detector_r.text)
