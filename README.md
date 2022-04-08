@@ -28,6 +28,6 @@ The CloudFormation stack below launches a Cloud9 enviorment with this repository
 
 This configuration works well for running the [Anomaly_Detection/](https://github.com/ev2900/OpenSearch_API_Examples/tree/main/Anomaly_Detection)
 
-[![Launch CloudFormation Stack](https://sharkech-public.s3.amazonaws.com/misc-public/cloudformation-launch-stack.png)](https://console.aws.amazon.com/cloudformation/home#/stacks/new?stackName=fluentd_demo&templateURL=https://sharkech-public.s3.amazonaws.com/misc-public/OpenSearch_demo_anomaly_detection.yaml)
+[![Launch CloudFormation Stack](https://sharkech-public.s3.amazonaws.com/misc-public/cloudformation-launch-stack.png)](https://console.aws.amazon.com/cloudformation/home#/stacks/new?stackName=os_anomaly_detection&templateURL=https://sharkech-public.s3.amazonaws.com/misc-public/OpenSearch_demo_anomaly_detection.yaml)
 
 <img width="450" alt="Fluentd_cloud9_Architecture" src="https://github.com/ev2900/CloudFormation_Examples/blob/main/Architecture%20Diagrams%20for%20README/OpenSearch_demo_anomaly_detection_yml.png">
