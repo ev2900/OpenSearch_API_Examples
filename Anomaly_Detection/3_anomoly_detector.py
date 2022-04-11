@@ -75,7 +75,7 @@ print('------')
 # --------------
 
 # the code below does not work. I need to finish this
-
+'''
 train_body = {
   "start_time": 1633048868000,
   "end_time": 1633394468000
@@ -88,3 +88,4 @@ POST _plugins/_anomaly_detection/detectors/AVDDBYABJkiJN-Gi3zx7/_start
   "start_time": 1633048868000,
   "end_time": 1633394468000
 }
+'''
