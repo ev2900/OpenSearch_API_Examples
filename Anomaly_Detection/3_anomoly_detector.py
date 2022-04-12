@@ -93,5 +93,4 @@ train_body = {
 train_detector_r = requests.post(os_url + '/_plugins/_anomaly_detection/detectors/' + str(create_detector_r_json['_id']) + '/_start', auth=('OSMasterUser', 'AwS#OpenSearch1'), headers= {'Content-type': 'application/json'}, data=json.dumps(train_body))
 
 print('------ Training an anomoly detector ------')
-print(train_detector_r.text)
-print('------')
+
