@@ -6,6 +6,7 @@
 
 import requests
 import json
+import datetime
 
 from datetime import datetime
 from random import randrange
@@ -22,7 +23,7 @@ def random_date(start, end):
 # --------------
 # Step 1 - Update this URL with your domain endpoint
 # --------------
-os_url = 'https://search-workshop-domain-atyey3n6ezpbugcxlk623l5ayi.us-east-1.es.amazonaws.com'
+os_url = 'https://search-workshop-domain-77uiopkggujcnt6dfn7fcena6m.us-east-1.es.amazonaws.com'
 
 # --------------
 # Step 2 - Create anomoly detector
@@ -70,22 +71,27 @@ print('------ Created an anomoly detector ------')
 print(create_detector_r.text)
 print('------')
 
+create_detector_r_json = create_detector_r.json()
+
 # --------------
 # Step 3 - Train anomoly detector
 # --------------
 
-# the code below does not work. I need to finish this
-'''
+now_seconds_since_epoch = int((datetime.now().strftime("%s"))) * 1000
+thrity_six_months_ago_seconds_since_epoch = int(((datetime.today() - relativedelta(months=+36)).strftime("%s"))) * 1000
+
+#print(now_seconds_since_epoch)
+#print(thrity_six_months_ago_seconds_since_epoch)
+
 train_body = {
-  "start_time": 1633048868000,
-  "end_time": 1633394468000
+  "start_time": thrity_six_months_ago_seconds_since_epoch,
+  "end_time": now_seconds_since_epoch
 }
 
+#print(os_url + '/_plugins/_anomaly_detection/detectors/' + str(create_detector_r_json['_id']) + '/_start')
 
+train_detector_r = requests.post(os_url + '/_plugins/_anomaly_detection/detectors/' + str(create_detector_r_json['_id']) + '/_start', auth=('OSMasterUser', 'AwS#OpenSearch1'), headers= {'Content-type': 'application/json'}, data=json.dumps(train_body))
 
-POST _plugins/_anomaly_detection/detectors/AVDDBYABJkiJN-Gi3zx7/_start
-{
-  "start_time": 1633048868000,
-  "end_time": 1633394468000
-}
-'''
+print('------ Training an anomoly detector ------')
+print(train_detector_r.text)
+print('------')
