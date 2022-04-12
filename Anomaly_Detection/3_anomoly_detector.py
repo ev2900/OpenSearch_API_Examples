@@ -37,7 +37,7 @@ create_detector_body = {
   ],
   "feature_attributes": [
     {
-      "feature_name": "test",
+      "feature_name": "cpu",
       "feature_enabled": True,
       "aggregation_query": {
         "test": {
