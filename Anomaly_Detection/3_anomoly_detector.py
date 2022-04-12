@@ -37,7 +37,7 @@ create_detector_body = {
   ],
   "feature_attributes": [
     {
-      "feature_name": "cpu",
+      "feature_name": "test",
       "feature_enabled": True,
       "aggregation_query": {
         "test": {
@@ -69,12 +69,11 @@ create_detector_r = requests.post(os_url + '/_plugins/_anomaly_detection/detecto
 
 print('------ Created an anomoly detector ------')
 print(create_detector_r.text)
-print('------')
 
 create_detector_r_json = create_detector_r.json()
 
 # --------------
-# Step 3 - Train anomoly detector
+# Step 3 - Histroical analysis
 # --------------
 
 now_seconds_since_epoch = int((datetime.now().strftime("%s"))) * 1000
@@ -92,6 +91,14 @@ train_body = {
 
 train_detector_r = requests.post(os_url + '/_plugins/_anomaly_detection/detectors/' + str(create_detector_r_json['_id']) + '/_start', auth=('OSMasterUser', 'AwS#OpenSearch1'), headers= {'Content-type': 'application/json'}, data=json.dumps(train_body))
 
-print('------ Training an anomoly detector ------')
+print('------ Started historical analysis ------')
 print(train_detector_r.text)
-print('------')
+
+# --------------
+# Step 4 - Real-time detector
+# --------------
+
+real_time_detector_r = requests.post(os_url + '/_plugins/_anomaly_detection/detectors/' + str(create_detector_r_json['_id']) + '/_start', auth=('OSMasterUser', 'AwS#OpenSearch1'), headers= {'Content-type': 'application/json'})
+
+print('------ Started real-time detector ------')
+print(real_time_detector_r.text)
