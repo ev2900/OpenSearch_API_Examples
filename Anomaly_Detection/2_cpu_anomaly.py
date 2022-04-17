@@ -30,7 +30,7 @@ os_url = 'https://search-workshop-domain-atyey3n6ezpbugcxlk623l5ayi.us-east-1.es
 # Step 2
 # --------------
 
-print('------ Start ------')
+print('------ Sending documents ------')
 
 # Spike the CPU of application 2
 start = datetime.today() - relativedelta(months=+36)
