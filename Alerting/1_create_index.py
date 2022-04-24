@@ -14,7 +14,7 @@ import json
 os_url = 'https://search-workshop-domain-t67jt2mhmfhfv7mo3obcbczw4a.us-east-1.es.amazonaws.com'
 
 # --------------
-# Step 2 - Create index
+# Step 2 - Create the index
 # --------------
 create_index_r_body = {
   "settings": {
@@ -49,4 +49,3 @@ create_index_r = requests.put(os_url + '/alert-1', auth=('OSMasterUser', 'AwS#Op
 
 print('------ Created an index on os cluster ------')
 print(create_index_r.text)
-print('------')
