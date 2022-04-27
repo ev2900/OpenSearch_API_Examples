@@ -31,3 +31,7 @@ This configuration works well for running the [Anomaly_Detection/](https://githu
 [![Launch CloudFormation Stack](https://sharkech-public.s3.amazonaws.com/misc-public/cloudformation-launch-stack.png)](https://console.aws.amazon.com/cloudformation/home#/stacks/new?stackName=os-anomaly-detection&templateURL=https://sharkech-public.s3.amazonaws.com/misc-public/OpenSearch_demo_anomaly_detection.yaml)
 
 <img width="450" alt="OpenSearch_demo_anomaly_detection_Architecture" src="https://github.com/ev2900/CloudFormation_Examples/blob/main/Architecture%20Diagrams%20for%20README/OpenSearch_demo_anomaly_detection_yml.png">
+
+## Future Improvements Planned for this Repository
+
+* Cross cluster search
