@@ -9,3 +9,11 @@ Follow the instructions below
 The resources created by the CloudFormation stack are documented in the architecture below
 
 <img width="600" alt="Fluentd_cloud9_Architecture" src="https://github.com/ev2900/CloudFormation_Examples/blob/main/Architecture%20Diagrams%20for%20README/OpenSearch_demo_alerting_yaml.png">
+
+2. Log into the OpenSearch dashboard 
+* Navigate to the CloudFormation stack output section
+* Open the DashboardURL and log in with the UserName and Password
+
+3. Set up a SNS alerting destination in OpenSearch
+*  
+
