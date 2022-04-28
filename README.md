@@ -32,6 +32,16 @@ This configuration works well for running the [Anomaly_Detection/](https://githu
 
 <img width="450" alt="OpenSearch_demo_anomaly_detection_Architecture" src="https://github.com/ev2900/CloudFormation_Examples/blob/main/Architecture%20Diagrams%20for%20README/OpenSearch_demo_anomaly_detection_yml.png">
 
+---
+
+The CloudFormation stack below launches a Cloud9 enviorment with this repository automaticlly cloned to it + an OpenSearch cluster that can be configured to run the alerting example
+
+This configuration works well for running the [Alerting/](https://github.com/ev2900/OpenSearch_API_Examples/tree/main/Alerting)
+
+[![Launch CloudFormation Stack](https://sharkech-public.s3.amazonaws.com/misc-public/cloudformation-launch-stack.png)](https://console.aws.amazon.com/cloudformation/home#/stacks/new?stackName=os-alerting&templateURL=https://sharkech-public.s3.amazonaws.com/misc-public/OpenSearch_demo_alerting.yaml)
+
+<img width="600" alt="Fluentd_cloud9_Architecture" src="https://github.com/ev2900/CloudFormation_Examples/blob/main/Architecture%20Diagrams%20for%20README/OpenSearch_demo_alerting_yaml.png">
+
 ## Future Improvements Planned for this Repository
 
 * Cross cluster search
