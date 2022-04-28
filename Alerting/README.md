@@ -14,7 +14,7 @@ The resources created by the CloudFormation stack are documented in the architec
 
 * Update the ```os_url``` variable with the URL of the OpenSearch domain endpoint
 
-Note the CloudFormation stack output section can provide you with the domain endpoint URL
+*Note the CloudFormation stack output section can provide you with the domain endpoint URL*
 
 Once you have updated the values save the file and ```python 1_create_index.py``` in the Cloud9 terminal
 
