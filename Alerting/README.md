@@ -12,7 +12,7 @@ The resources created by the CloudFormation stack are documented in the architec
 
 2. Open the Cloud9 environment and create an index by running the [1_create_index.py](https://github.com/ev2900/OpenSearch_API_Examples/blob/main/Alerting/1_create_index.py) python script in the Cloud9 terminal
 
-* Update the os_url variable with the URL of the OpenSearch domain endpoint
+* Update the ```os_url``` variable with the URL of the OpenSearch domain endpoint
 
 Note the CloudFormation stack output section can provide you with the domain endpoint URL
 
