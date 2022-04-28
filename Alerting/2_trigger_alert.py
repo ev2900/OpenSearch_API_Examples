@@ -21,7 +21,7 @@ os_url = 'https://search-workshop-domain-4o7rkivj7fys3hzg6sowxsrmqq.us-east-1.es
 # Step 2
 # --------------
 
-number_of_log_messages_to_send = 1000
+number_of_log_messages_to_send = 10
 counter = 0
 document_index_start = 0
 
