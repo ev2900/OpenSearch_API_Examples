@@ -10,7 +10,9 @@ The resources created by the CloudFormation stack are documented in the architec
 
 <img width="600" alt="Fluentd_cloud9_Architecture" src="https://github.com/ev2900/CloudFormation_Examples/blob/main/Architecture%20Diagrams%20for%20README/OpenSearch_demo_alerting_yaml.png">
 
-2. Log into the OpenSearch dashboard (URL, UserName and Password can be found in the CloudFormation Stack Outputs)
+2. Open the Cloud9 environment and create an index by running the [1_create_index.py](https://github.com/ev2900/OpenSearch_API_Examples/blob/main/Alerting/1_create_index.py) python script in the Cloud9 terminal
+
+3. Log into the OpenSearch dashboard (URL, UserName and Password can be found in the CloudFormation Stack Outputs)
 
 3. Set up a SNS alerting destination. On alerting OpenSearch plugin page add a destination and configure it as follows
    * Name = ```SNS Destination```
