@@ -18,9 +18,7 @@ Note the CloudFormation stack output section can provide you with the domain end
 
 Once you have updated the values save the file and ```python 1_create_index.py``` in the Cloud9 terminal
 
-3. Log into the OpenSearch dashboard (URL, UserName and Password can be found in the CloudFormation Stack Outputs)
-
-3. Set up a SNS alerting destination. On alerting OpenSearch plugin page add a destination and configure it as follows
+3. Log into the OpenSearch dashboard (URL, UserName and Password can be found in the CloudFormation Stack Outputs) to set up a SNS alerting destination. On alerting OpenSearch plugin page add a destination and configure it as follows
    * Name = ```SNS Destination```
    * Type = ```Amazon SNS```    
    * SNS topic ARN = the TopicARN value from CloudFormation Stack output  
