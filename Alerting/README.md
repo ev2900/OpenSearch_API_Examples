@@ -30,6 +30,16 @@ Once you have updated the values save the file and ```python 1_create_index.py``
   * Monitor defining method = ```Visual editor```
   * Frequency = ```By interval```
   * Run every = ``` 1 ``` ```minute```
-  * Index = 
-  * Time field =
-  * 
+  * Index = ```alert-1```
+  * Time field = ```eventtime```
+  * Metric = ```MAX OF cpu_util```
+  * Trigger
+    * Trigger name = ```CPU over 50```
+    * Severity level = ```1 (Highest)```
+    * Trigger condition = ```IS ABOVE``` ```50```
+  * Actions
+    * Action name = ```Email Alert```
+    * Destination = ```SNS Destination - (Amazon SNS)```
+    * Message subject = ```High CPU!```
+  
+  
