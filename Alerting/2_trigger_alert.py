@@ -8,19 +8,20 @@
 import requests
 import json
 import random
+import time
 
 from datetime import datetime
 
 # --------------
 # Step 1 - Update this URL with your domain endpoint
 # --------------
-os_url = 'https://search-workshop-domain-t67jt2mhmfhfv7mo3obcbczw4a.us-east-1.es.amazonaws.com'
+os_url = 'https://search-workshop-domain-4o7rkivj7fys3hzg6sowxsrmqq.us-east-1.es.amazonaws.com'
 
 # --------------
 # Step 2
 # --------------
 
-number_of_log_messages_to_send = 1
+number_of_log_messages_to_send = 1000
 counter = 0
 document_index_start = 0
 
@@ -41,3 +42,5 @@ while counter < number_of_log_messages_to_send:
         
     counter = counter + 1
     document_index_start = document_index_start + 1
+    
+    time.sleep(30)
