@@ -42,4 +42,10 @@ Once you have updated the values save the file and ```python 1_create_index.py``
     * Destination = ```SNS Destination - (Amazon SNS)```
     * Message subject = ```High CPU!```
   
-  
+5. Open the Cloud9 environment and send sample data that will trigger an alert [2_trigger_alert.py](https://github.com/ev2900/OpenSearch_API_Examples/blob/main/Alerting/2_trigger_alert.py) python script in the Cloud9 terminal  
+
+* Update the ```os_url``` variable with the URL of the OpenSearch domain endpoint
+
+*Note the CloudFormation stack output section can provide you with the domain endpoint URL*
+
+Once you have updated the values save the file and ```2_trigger_alert.py``` in the Cloud9 terminal
