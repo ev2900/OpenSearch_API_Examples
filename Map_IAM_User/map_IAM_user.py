@@ -11,13 +11,16 @@ import json
 # --------------
 # Step 1 - Update this URL with your domain endpoint
 # --------------
-os_url = 'https://search-fluentd-domain-qjskzejtju5tryntaw6s4wkbfa.us-east-1.es.amazonaws.com'
+os_url = '<domain endpoint URL>'
+
+# Remove trailing slash if exists
+os_url = os_url.strip().rstrip("/")
 
 # --------------
 # Step 2 - Update ARN of IAM role to map to OpenSearch all_access role
 # --------------
 
-iam_arn = 'arn:aws:iam::376390845435:user/Fluentd_User_OpenSearch'
+iam_arn = '<IAM role/user ARN>'
 
 # --------------
 # Step 3 - Map IAM user ARN to all_access role
