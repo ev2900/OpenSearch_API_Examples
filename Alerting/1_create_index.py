@@ -11,7 +11,7 @@ import json
 # --------------
 # Step 1 - Update this URL with your domain endpoint
 # --------------
-os_url = 'https://search-workshop-domain-t67jt2mhmfhfv7mo3obcbczw4a.us-east-1.es.amazonaws.com'
+os_url = '<os_domain_endpoint_url>'
 
 # --------------
 # Step 2 - Create the index
