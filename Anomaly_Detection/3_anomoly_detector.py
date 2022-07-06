@@ -23,7 +23,7 @@ def random_date(start, end):
 # --------------
 # Step 1 - Update this URL with your domain endpoint
 # --------------
-os_url = 'https://search-workshop-domain-77uiopkggujcnt6dfn7fcena6m.us-east-1.es.amazonaws.com'
+os_url = '<os_domain_endpoint_url>'
 
 # --------------
 # Step 2 - Create anomoly detector
