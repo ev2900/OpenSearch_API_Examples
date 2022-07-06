@@ -24,7 +24,7 @@ def random_date(start, end):
 # --------------
 # Step 1 - - Update this URL with your domain endpoint
 # --------------
-os_url = 'https://search-workshop-domain-atyey3n6ezpbugcxlk623l5ayi.us-east-1.es.amazonaws.com'
+os_url = '<os_domain_endpoint_url>'
 
 # --------------
 # Step 2
