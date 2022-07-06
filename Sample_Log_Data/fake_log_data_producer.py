@@ -23,7 +23,7 @@ def random_date(start, end):
 # --------------
 # Step 1
 # --------------
-os_url = 'https://search-workshop-domain-rasyvcadldo6spty6dwhtsaw6y.us-east-1.es.amazonaws.com'
+os_url = '<os_domain_endpoint_url>'
 
 # --------------
 # Step 2
