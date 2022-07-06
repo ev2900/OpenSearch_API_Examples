@@ -23,8 +23,8 @@ import json
 # --------------
 # Step 2
 # --------------
-leader_os_url = 'https://search-workshop-domain-leader-hys2ht2mr672dsoh5s7m24zdbe.us-east-1.es.amazonaws.com'
-follower_os_url = 'https://search-workshop-domain-follower-silf2zzppkbphk3mvgv7qkcsp4.us-east-1.es.amazonaws.com'
+leader_os_url = '<os_domain_endpoint_url>'
+follower_os_url = '<os_domain_endpoint_url>'
 
 # --------------
 # Step 3
