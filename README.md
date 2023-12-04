@@ -1,12 +1,12 @@
 # OpenSearch API Examples
 
-<img width="85" alt="map-user" src="https://img.shields.io/badge/views-0000-green"> <img width="125" alt="map-user" src="https://img.shields.io/badge/unique visits-0000-green">
+<img width="85" alt="map-user" src="https://img.shields.io/badge/views-826-green"> <img width="125" alt="map-user" src="https://img.shields.io/badge/unique visits-0000-green">
 
 Example Python programs that use the OpenSearch APIs for common tasks
 
 ---
 
-The CloudFormation stack below launches a Cloud9 enviorment with this repository automaticlly cloned to it + an OpenSearch cluster. 
+The CloudFormation stack below launches a Cloud9 enviorment with this repository automaticlly cloned to it + an OpenSearch cluster.
 
 This configuration works well for running the [Sample_Log_Data/](https://github.com/ev2900/OpenSearch_API_Examples/tree/main/Sample_Log_Data)
 
@@ -16,7 +16,7 @@ This configuration works well for running the [Sample_Log_Data/](https://github.
 
 ---
 
-The CloudFormation stack below launches a Cloud9 enviorment with this repository automaticlly cloned to it + two OpenSearch cluster that can be configured to replicate data from one cluster to another 
+The CloudFormation stack below launches a Cloud9 enviorment with this repository automaticlly cloned to it + two OpenSearch cluster that can be configured to replicate data from one cluster to another
 
 This configuration works well for running the [Cross_Cluster_Replication/](https://github.com/ev2900/OpenSearch_API_Examples/tree/main/Cross_Cluster_Replication)
 
