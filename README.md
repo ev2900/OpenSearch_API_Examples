@@ -1,6 +1,6 @@
 # OpenSearch API Examples
 
-<img width="275" alt="map-user" src="https://img.shields.io/badge/cloudformation template deployments-1413-blue"> <img width="85" alt="map-user" src="https://img.shields.io/badge/views-1038-green"> <img width="125" alt="map-user" src="https://img.shields.io/badge/unique visits-236-green">
+<img width="275" alt="map-user" src="https://img.shields.io/badge/cloudformation template deployments-1413-blue"> <img width="85" alt="map-user" src="https://img.shields.io/badge/views-1038-green"> <img width="125" alt="map-user" src="https://img.shields.io/badge/unique visits-243-green">
 
 Example Python programs that use the OpenSearch APIs for common tasks
 
